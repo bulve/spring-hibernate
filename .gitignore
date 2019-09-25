@@ -1,0 +1,63 @@
+#use global syntax for excludes
+syntax: glob
+#exclude intelliJ files
+.idea
+.vagrant
+.node
+*.iml
+#exclude eclipse files
+.settings
+.metadata
+.workspace
+*.project
+*.classpath
+*.springBeans
+*.springWebflow
+maven-eclipse.xml
+#common tools files
+*.pmd
+*.checkstyle
+target
+__bundles__
+*/test-product-model-tree/src/kraken_model_tree_GLOBAL.ts
+# Logs
+logs
+*.log
+# Runtime data
+pids
+*.pid
+*.seed
+# Coverage tools
+lib-cov
+coverage
+# Dependency directory
+node_modules
+# Generated code
+gen
+dist
+transpiled
+build
+generated
+plugin_gen.xml
+plugin.xml_gen
+*.tgz
+# Mac OSX
+.DS_Store
+# Eclipse Trace
+*._trace
+# Eclipse XText & Xtend
+*/xtend-gen/*
+*/xtext-gen/*
+*/src-gen/*
+#Gateway selection
+*/gateway/Gateway.js
+# Deployment scripts
+docker/dev/connect.bat
+# git
+*.orig
+sandbox/antlr4/KrakenDSL.g4
+.vscode
+**tmp**
+kraken-expression-language/dependency-reduced-pom.xml
+kraken-model-dsl/dependency-reduced-pom.xml
+*.versionsBackup
