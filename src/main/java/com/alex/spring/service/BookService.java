@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 @Service
-public class LibraryService {
+public class BookService {
 
     @Autowired
     private DatabaseService databaseService;
 
-    public Collection<Book> getLibraryBooks(String libraryId) {
-        return databaseService.getLibraryBooks(libraryId);
+    public Collection<Book> getBooks() {
+        return databaseService.getBooks();
     }
 
 }

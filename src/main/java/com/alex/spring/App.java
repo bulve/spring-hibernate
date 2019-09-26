@@ -10,3 +10,7 @@ public class App {
         SpringApplication.run(App.class, args);
     }
 }
+
+
+//TODO
+//Add hibernate with data base, model mapping, complex query
