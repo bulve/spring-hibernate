@@ -16,15 +16,15 @@ import java.util.stream.Stream;
 public class DatabaseService {
 
     private Collection<Book> harryPotterBooks = Arrays.asList(
-            new Book("01", "Harry Potter And sth", "About young kid", Arrays.asList(new Author("01", "Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
-            new Book("02", "Harry Potter And sth", "About young kid", Arrays.asList(new Author("01", "Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
-            new Book("03", "Harry Potter And sth", "About young kid", Arrays.asList(new Author("01", "Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05"))))
+            new Book("01", "Harry Potter And sth", "About young kid", Arrays.asList(new Author("Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
+            new Book("02", "Harry Potter And sth", "About young kid", Arrays.asList(new Author("Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
+            new Book("03", "Harry Potter And sth", "About young kid", Arrays.asList(new Author("Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05"))))
     );
 
     private Collection<Book> lordOfTheRingBooks = Arrays.asList(
-            new Book("01", "Lord of The Rings", "About young kid", Arrays.asList(new Author("01", "Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
-            new Book("02", "Lord of The Rings", "About young kid", Arrays.asList(new Author("01", "Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
-            new Book("03", "Lord of The Rings", "About young kid", Arrays.asList(new Author("01", "Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05"))))
+            new Book("01", "Lord of The Rings", "About young kid", Arrays.asList(new Author("Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
+            new Book("02", "Lord of The Rings", "About young kid", Arrays.asList(new Author("Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05")))),
+            new Book("03", "Lord of The Rings", "About young kid", Arrays.asList(new Author("Mr", "Antanas", "Baranauskas", null, LocalDate.parse("1921-02-05"))))
     );
 
     private Collection<Library> libraries = Arrays.asList(

@@ -1,10 +1,17 @@
 package com.alex.spring.model;
 
+import javax.persistence.Entity;
 import java.time.LocalDate;
 
+@Entity
 public class Visitor extends Person {
-    public Visitor(String id, String title, String firstName, String lastName, String middleName,
-            LocalDate dateOfBirth) {
-        super(id, title, firstName, lastName, middleName, dateOfBirth);
+
+
+    public Visitor() {
+    }
+
+    public Visitor(String title, String firstName, String lastName, String middleName,
+                   LocalDate dateOfBirth) {
+        super(title, firstName, lastName, middleName, dateOfBirth);
     }
 }

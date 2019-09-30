@@ -1,24 +1,66 @@
 package com.alex.spring.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import java.time.LocalDate;
 
+@Entity
 public class Person {
 
+    @Id
+    @GeneratedValue
     private String id;
 
     private String title;
+
+    @NotNull
     private String firstName;
+
+    @NotNull
     private String lastName;
+
     private String middleName;
+
+    @Past
+    @NotNull
     private LocalDate dateOfBirth;
 
-    public Person(String id, String title, String firstName, String lastName, String middleName,
-            LocalDate dateOfBirth) {
-        this.id = id;
+    public Person() {
+    }
+
+    public Person(String title, String firstName, String lastName, String middleName,
+                  LocalDate dateOfBirth) {
         this.title = title;
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

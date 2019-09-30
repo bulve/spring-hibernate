@@ -1,11 +1,16 @@
 package com.alex.spring.model;
 
+import javax.persistence.Entity;
 import java.time.LocalDate;
 
+@Entity
 public class Author extends Person{
 
-    public Author(String id, String title, String firstName, String lastName, String middleName,
+    public Author() {
+    }
+
+    public Author(String title, String firstName, String lastName, String middleName,
             LocalDate dateOfBirth) {
-        super(id, title, firstName, lastName, middleName, dateOfBirth);
+        super(title, firstName, lastName, middleName, dateOfBirth);
     }
 }

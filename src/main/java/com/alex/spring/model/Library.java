@@ -1,9 +1,15 @@
 package com.alex.spring.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Collection;
 
+@Entity
 public class Library {
 
+    @Id
+    @GeneratedValue
     private String id;
 
     private String address;
@@ -15,8 +21,7 @@ public class Library {
     public Library() {
     }
 
-    public Library(String id, String address, String name, Collection<Book> books) {
-        this.id = id;
+    public Library(String address, String name, Collection<Book> books) {
         this.address = address;
         this.name = name;
         this.books = books;
@@ -53,4 +58,5 @@ public class Library {
     public String getName() {
         return name;
     }
+
 }
