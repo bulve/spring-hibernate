@@ -3,6 +3,7 @@ package com.alex.spring.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import java.util.Collection;
 
 @Entity
@@ -16,6 +17,7 @@ public class Library {
 
     private String name;
 
+    @ManyToMany
     private Collection<Book> books;
 
     public Library() {

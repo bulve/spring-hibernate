@@ -1,6 +1,7 @@
 package com.alex.spring.controller;
 
 import com.alex.spring.model.Book;
+import com.alex.spring.model.Library;
 import com.alex.spring.service.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,8 +18,18 @@ public class LibraryController {
     @Autowired
     private LibraryService libraryService;
 
-    @GetMapping("/{libraryId}")
+    @GetMapping("/books/{libraryId}")
     public Collection<Book> getLibraryBooks(@PathVariable("libraryId") String libraryId) {
-        return libraryService.getLibraryBooks(libraryId);
+        return libraryService.getOne(libraryId).getBooks();
+    }
+
+    @GetMapping()
+    public Collection<Library> getLibraries() {
+        return libraryService.findAll();
+    }
+
+    @GetMapping("/{libraryId}")
+    public Library getLibrary(@PathVariable("libraryId") String libraryId) {
+        return libraryService.getOne(libraryId);
     }
 }

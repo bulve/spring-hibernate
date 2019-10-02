@@ -28,9 +28,9 @@ public class DatabaseService {
     );
 
     private Collection<Library> libraries = Arrays.asList(
-            new Library("01", "Kapsu 11", "Naujamaiestio filialas", harryPotterBooks),
-            new Library("02", "Kapsu 11", "Naujamaiestio filialas", lordOfTheRingBooks),
-            new Library("03", "Kapsu 11", "Naujamaiestio filialas", Collections.emptyList())
+            new Library("Kapsu 11", "Naujamaiestio filialas", harryPotterBooks),
+            new Library("Kapsu 11", "Naujamaiestio filialas", lordOfTheRingBooks),
+            new Library("Kapsu 11", "Naujamaiestio filialas", Collections.emptyList())
     );
 
 
