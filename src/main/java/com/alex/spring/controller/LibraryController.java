@@ -4,10 +4,7 @@ import com.alex.spring.model.Book;
 import com.alex.spring.model.Library;
 import com.alex.spring.service.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -26,6 +23,11 @@ public class LibraryController {
     @GetMapping()
     public Collection<Library> getLibraries() {
         return libraryService.findAll();
+    }
+
+    @PostMapping()
+    public Library saveLibrary(@RequestBody Library library) {
+        return libraryService.saveOne(library);
     }
 
     @GetMapping("/{libraryId}")

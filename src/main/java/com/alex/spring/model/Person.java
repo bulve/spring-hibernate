@@ -1,13 +1,13 @@
 package com.alex.spring.model;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import java.time.LocalDate;
 
-@Entity
+@MappedSuperclass
 public class Person {
 
     @Id

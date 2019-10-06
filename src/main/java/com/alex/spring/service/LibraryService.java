@@ -23,4 +23,8 @@ public class LibraryService implements com.alex.spring.service.Service<Library> 
     public Library getOne(String id) {
         return libraryRepository.getOne(id);
     }
+
+    public Library saveOne(Library library) {
+        return libraryRepository.save(library);
+    }
 }
